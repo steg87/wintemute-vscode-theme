@@ -1,0 +1,21 @@
+{
+  "name": "wintermute",
+  "displayName": "Wintermute",
+  "description": "Modern cyberpunk",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.88.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Wintermute",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Wintermute-color-theme.json"
+      }
+    ]
+  }
+}
