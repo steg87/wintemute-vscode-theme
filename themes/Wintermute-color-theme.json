@@ -15,9 +15,15 @@
     "statusBar.background": "#163c52",
     "editorGroupHeader.tabsBackground": "#13242e",
     "menu.background": "#102c3b",
-    "editorError.foreground": "#ff4800", // This changes the color of error squiggles
-    "editorWarning.foreground": "#d6dd6f", // This changes the color of warning squiggles
-    "editorInfo.foreground": "#0000ff",
+    "editorError.foreground": "#00000000",
+    "editorError.background": "#c7594a50",
+    "errorLens.errorBackground": "#c7594a50",
+    "editorWarning.foreground": "#00000000",
+    "editorWarning.background": "#df943850",
+    "errorLens.warningBackground": "#df943850",
+    "editorInfo.foreground": "#00000000",
+    "editorInfo.background": "#60928c50",
+    "errorLens.infoBackground": "#60928c50",
     "terminal.ansiBrightGreen": "#94fda2",
     "terminal.ansiBrightBlue": "#75ffff"
   },
@@ -113,11 +119,7 @@
     },
     {
       "name": "Function, Special Method",
-      "scope": [
-        "entity.name.function",
-        "variable.function",
-        "keyword.other.special-method"
-      ],
+      "scope": ["variable.function"],
       "settings": {
         "foreground": "#74ee84"
       }
@@ -151,7 +153,16 @@
     },
     {
       "name": "Functions, Methods",
-      "scope": ["meta.function-call", "entity.name.function.decorator.python"],
+      "scope": [
+        "support.function",
+        "meta.function-call",
+        "entity.name.function",
+        "meta.function.python",
+        "entity.name.function.decorator.python",
+        "keyword.other.special-method",
+        "meta.function-call.generic.python",
+        "meta.member.access.python"
+      ],
       "settings": {
         "foreground": "#d6dd6f"
       }
@@ -167,7 +178,6 @@
       "name": "String, Symbols, Inherited Class, Markup Heading",
       "scope": [
         "string",
-        "support.function",
         "constant.other.symbol",
         "constant.other.key",
         "entity.other.inherited-class",
