@@ -1,21 +1,25 @@
 {
   "name": "Wintermute",
   "colors": {
-    "editor.background": "#13242ee7",
-    "editor.foreground": "#75d8fff6",
-    "activityBar.background": "#163c52e7",
+    "editor.background": "#13242e",
+    "editor.foreground": "#75d8ff",
+    "activityBar.background": "#163c52",
     "activityBar.inactiveForeground": "#9bd3e9",
-    "activityBarBadge.background": "#551d44",
-    "sideBar.background": "#102c3be7",
+    "activityBarBadge.background": "#992376",
+    "sideBar.background": "#102c3b",
     "sideBarTitle.foreground": "#9bd3e9",
-    "titleBar.activeBackground": "#102c3be7",
-    "tab.inactiveBackground": "#021927e7",
+    "titleBar.activeBackground": "#102c3b",
+    "tab.inactiveBackground": "#021927",
     "activityBarTop.background": "#ff0000",
     "statusBarItem.errorBackground": "#a53509",
-    "statusBar.background": "#163c52e7",
-    "editorGroupHeader.tabsBackground": "#13242ee7",
-	"terminal.ansiBrightGreen": "#94fda2da",
-	"terminal.ansiBrightBlue": "#75fffff6"
+    "statusBar.background": "#163c52",
+    "editorGroupHeader.tabsBackground": "#13242e",
+    "menu.background": "#102c3b",
+    "editorError.foreground": "#ff4800", // This changes the color of error squiggles
+    "editorWarning.foreground": "#d6dd6f", // This changes the color of warning squiggles
+    "editorInfo.foreground": "#0000ff",
+    "terminal.ansiBrightGreen": "#94fda2",
+    "terminal.ansiBrightBlue": "#75ffff"
   },
   "tokenColors": [
     {
@@ -23,12 +27,16 @@
       "scope": ["comment", "punctuation.definition.comment"],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#39525e"
+        "foreground": "#4e7181"
       }
     },
     {
       "name": "Variables",
-      "scope": ["variable", "string constant.other.placeholder"],
+      "scope": [
+        "variable",
+        "string constant.other.placeholder",
+        "meta.function-call.arguments"
+      ],
       "settings": {
         "foreground": "#9bd3e9"
       }
@@ -49,18 +57,25 @@
     },
     {
       "name": "Keyword, Storage",
-      "scope": ["keyword", "storage.type", "storage.modifier"],
+      "scope": ["storage.type", "storage.modifier"],
       "settings": {
         "fontStyle": "italic",
         "foreground": "#c875ff"
       }
     },
     {
+      "name": "Parameters",
+      "scope": ["meta.function.parameters"],
+      "settings": {
+        "foreground": "#fc76d4"
+      }
+    },
+    {
       "name": "Operator, Misc",
       "scope": [
+        "keyword",
         "keyword.control",
         "constant.other.color",
-        "punctuation",
         "meta.tag",
         "punctuation.definition.tag",
         "punctuation.separator.inheritance.php",
@@ -70,17 +85,19 @@
         "punctuation.section.embedded",
         "keyword.other.template",
         "keyword.other.substitution",
+        "support.type",
+        "variable.language"
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#fc76d4ee"
+        "foreground": "#fc76d4"
       }
     },
     {
       "name": "Parameters",
       "scope": ["variable.parameter"],
       "settings": {
-        "foreground": "#fc76d4ee"
+        "foreground": "#c875ff"
       }
     },
     {
@@ -98,20 +115,18 @@
       "name": "Function, Special Method",
       "scope": [
         "entity.name.function",
-        "meta.function-call",
         "variable.function",
-        "support.function",
         "keyword.other.special-method"
       ],
       "settings": {
-        "foreground": "#94fda2da"
+        "foreground": "#74ee84"
       }
     },
     {
       "name": "Block Level Variables",
       "scope": ["meta.block variable.other"],
       "settings": {
-        "foreground": "#8ff071"
+        "foreground": "#6bfc7f"
       }
     },
     {
@@ -122,24 +137,37 @@
       }
     },
     {
-      "name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
+      "name": "Constant, Function Argument, Tag Attribute, Embedded",
       "scope": [
-        "constant.numeric",
         "constant.language",
         "support.constant",
-        "constant.character",
         "constant.escape",
         "keyword.other.unit",
         "keyword.other"
       ],
       "settings": {
-        "foreground": "#ffaf64"
+        "foreground": "#4891ff"
+      }
+    },
+    {
+      "name": "Functions, Methods",
+      "scope": ["meta.function-call", "entity.name.function.decorator.python"],
+      "settings": {
+        "foreground": "#d6dd6f"
+      }
+    },
+    {
+      "name": "Number, Chars",
+      "scope": ["constant.numeric", "constant.character"],
+      "settings": {
+        "foreground": "#d3f3ff"
       }
     },
     {
       "name": "String, Symbols, Inherited Class, Markup Heading",
       "scope": [
         "string",
+        "support.function",
         "constant.other.symbol",
         "constant.other.key",
         "entity.other.inherited-class",
@@ -148,14 +176,13 @@
         "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
       ],
       "settings": {
-        "foreground": "#d6dd6f"
+        "foreground": "#ffaf64"
       }
     },
     {
       "name": "Class, Support",
       "scope": [
         "entity.name",
-        "support.type",
         "support.class",
         "support.other.namespace.use.php",
         "meta.use.php",
@@ -164,14 +191,14 @@
         "support.type.sys-types"
       ],
       "settings": {
-        "foreground": "#4dbeff"
+        "foreground": "#23fff4"
       }
     },
     {
       "name": "Entity Types",
-      "scope": ["support.type"],
+      "scope": [],
       "settings": {
-        "foreground": "#B2CCD6"
+        "foreground": "#16ff29"
       }
     },
     {
@@ -201,7 +228,7 @@
     },
     {
       "name": "Language methods",
-      "scope": ["variable.language"],
+      "scope": [],
       "settings": {
         "fontStyle": "italic",
         "foreground": "#FF5370"
