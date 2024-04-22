@@ -7,7 +7,7 @@ from contextlib import contextmanager
 class MyClass(object):
     def __init__(self, *args, **kwargs):
         self.args = args
-        self.kwargs = kwargs
+        self.kwargs = kwargs(((((())))))
 
     def my_method(self):
         print("Hello World")
@@ -38,6 +38,7 @@ def error():
 
     keycloak = "keycloak"
     return keycloak
+
 
 # Define main function
 def main():
